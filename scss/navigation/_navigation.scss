@@ -1,0 +1,86 @@
+.navigation {
+    display: grid;
+    grid-auto-flow: column;
+    border-bottom: 1px solid $lightGrayishBlue;
+
+    .nav-left {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: start;
+        align-items: center;
+        column-gap: 2.5rem;
+
+        .link {
+            height: 100%;
+            position: relative;
+
+            a {
+                font-size: $small;
+                font-weight: 500;
+                color: $darkGrayishBlue;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            &::after, &::before {
+                display: block;
+                content: "";
+                width: 0%;
+                height: 2px;
+                background-color: $orange;
+                position: absolute;
+                bottom: 0;
+                opacity: 0;
+                transition: all 300ms ease;
+            }
+
+            &::after {
+                left: 0;
+            }
+
+            &::before {
+                right: 0;
+            }
+
+            &:hover {
+
+                &::after, &::before {
+                    width: 50%;
+                    opacity: 1;
+                }
+
+                a {
+                    color: $veryDarkBlue;
+                }
+            }
+        }
+
+        .link.active-link {
+
+            &::after, &::before {
+                width: 50%;
+                opacity: 1;
+            }
+
+            a {
+                color: $veryDarkBlue;
+            }
+        }
+    }
+
+    .nav-right {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: end;
+        align-items: center;
+        column-gap: 2.5rem;
+
+        .btn-user-avatar {
+
+            .avatar {
+                width: 45px;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import "../../../scss/global";
+@import "../../../scss/variables";
+@import "../../../scss/utilities";
+@import "../../scss/page";
+@import "../../../scss/navigation/navigation";
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "col-one col-two";
+    ;
+
+    .col-one {
+        grid-area: col-one;
+    }
+
+    .col-two {
+        grid-area: col-two;
+    }
+}

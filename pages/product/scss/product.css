@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+li, a, button {
+  transition: all 300ms ease;
+}
+
+.container {
+  padding: 0 8rem;
+}
+
+.btn-circle {
+  border-radius: 100%;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px calc(100% - 100px);
+  grid-template-areas: "navigation" "content";
+  height: 100%;
+}
+.page-grid .navigation {
+  grid-area: navigation;
+}
+.page-grid .content {
+  grid-area: content;
+}
+
+.navigation {
+  display: grid;
+  grid-auto-flow: column;
+  border-bottom: 1px solid hsl(223, 64%, 98%);
+}
+.navigation .nav-left {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  column-gap: 2.5rem;
+}
+.navigation .nav-left .link {
+  height: 100%;
+  position: relative;
+}
+.navigation .nav-left .link a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: hsl(219, 9%, 45%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navigation .nav-left .link::after, .navigation .nav-left .link::before {
+  display: block;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: hsl(26, 100%, 55%);
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition: all 300ms ease;
+}
+.navigation .nav-left .link::after {
+  left: 0;
+}
+.navigation .nav-left .link::before {
+  right: 0;
+}
+.navigation .nav-left .link:hover::after, .navigation .nav-left .link:hover::before {
+  width: 50%;
+  opacity: 1;
+}
+.navigation .nav-left .link:hover a {
+  color: hsl(220, 13%, 13%);
+}
+.navigation .nav-left .link.active-link::after, .navigation .nav-left .link.active-link::before {
+  width: 50%;
+  opacity: 1;
+}
+.navigation .nav-left .link.active-link a {
+  color: hsl(220, 13%, 13%);
+}
+.navigation .nav-right {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  align-items: center;
+  column-gap: 2.5rem;
+}
+.navigation .nav-right .btn-user-avatar .avatar {
+  width: 45px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "col-one col-two";
+}
+.product-grid .col-one {
+  grid-area: col-one;
+}
+.product-grid .col-two {
+  grid-area: col-two;
+}/*# sourceMappingURL=product.css.map */

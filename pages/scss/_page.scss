@@ -1,0 +1,18 @@
+.page-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px calc(100% - 100px);
+    grid-template-areas: 
+        "navigation"
+        "content"
+    ;
+    height: 100%;
+
+    .navigation {
+        grid-area: navigation;
+    }
+
+    .content {
+        grid-area: content;
+    }
+}
