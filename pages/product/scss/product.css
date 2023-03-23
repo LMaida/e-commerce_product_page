@@ -127,6 +127,31 @@ li, a, button {
 .product-grid .col-one {
   grid-area: col-one;
 }
+.product-grid .col-one .slider {
+  display: grid;
+  grid-template-columns: 450px;
+  place-content: center;
+  justify-items: center;
+  align-items: center;
+  row-gap: 0.6rem;
+  height: 100%;
+}
+.product-grid .col-one .slider .slider-image-active {
+  width: 100%;
+  border-radius: 20px;
+}
+.product-grid .col-one .slider .slider-images {
+  display: grid;
+  place-content: space-between;
+  grid-auto-flow: column;
+  overflow: hidden;
+  width: 100%;
+}
+.product-grid .col-one .slider .slider-images .slider-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+}
 .product-grid .col-two {
   grid-area: col-two;
 }/*# sourceMappingURL=product.css.map */

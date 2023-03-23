@@ -8,11 +8,40 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
-        "col-one col-two";
+        "col-one col-two"
     ;
 
     .col-one {
         grid-area: col-one;
+
+        .slider {
+            display: grid;
+            grid-template-columns: 450px;
+            place-content: center;
+            justify-items: center;
+            align-items: center;
+            row-gap: 0.6rem;
+            height: 100%;
+
+            .slider-image-active {
+                width: 100%;
+                border-radius: 20px;
+            }
+
+            .slider-images {
+                display: grid;
+                place-content: space-between;
+                grid-auto-flow: column;
+                overflow: hidden;
+                width: 100%;
+
+                .slider-image {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 15px;
+                }
+            }
+        }
     }
 
     .col-two {
