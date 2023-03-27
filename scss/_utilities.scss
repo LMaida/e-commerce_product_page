@@ -3,5 +3,25 @@
 }
 
 .btn-circle {
-    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.btn-small {
+    padding: 1rem 2rem;
+}
+
+.btn-large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 5rem;
+    border-radius: 12px;
+    color: $white;
+    font-size: $medium;
+}
+
+.ico-left {
+    margin-right: 0.5rem;
 }

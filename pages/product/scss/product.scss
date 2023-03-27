@@ -46,5 +46,95 @@
 
     .col-two {
         grid-area: col-two;
+
+        .product-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .category {
+                font-size: $medium;
+                font-weight: 600;
+                color: $orange;
+                text-transform: uppercase;
+                margin-bottom: 0.85rem;
+            }
+
+            .title {
+                font-size: $headingTwo;
+                line-height: 0.95;
+                margin-bottom: 2.5rem;
+            }
+
+            .description {
+                width: 60%;
+                font-size: $medium;
+                font-weight: 400;
+                color: $darkGrayishBlue;
+                line-height: 1.7;
+            }
+
+            .product-price {
+                margin-top: 1.6rem;
+
+                .prices {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0.2rem;
+
+                    .new-price {
+                        font-size: $headingThree;
+                        font-weight: 700;
+                    }
+
+                    .discount {
+                        font-size: $small;
+                        font-weight: 600;
+                        color: $orange;
+                        background-color: $palOrange;
+                        margin-left: 0.75rem;
+                        padding: 0.2rem 0.5rem;
+                        border-radius: 6px;
+                    }
+                }
+
+                .old-price {
+                    font-size: $medium;
+                    font-weight: 500;
+                    color: $darkGrayishBlue;
+                    text-decoration: line-through;
+                }
+            }
+
+            .controls-group {
+                display: flex;
+                margin-top: 1.6rem;
+
+                .buttons-group {
+                    background-color: $lightGrayishBlue;
+                    border-radius: 12px;
+
+                    .btn-decrease, .btn-increase {
+                        color: $orange;
+                        font-weight: 500;
+                        font-size: $medium;
+                    }
+
+                    .quantity {
+                        font-weight: 500;
+                    }
+                }
+
+                .btn-cart {
+                    background-color: $orange;
+                    margin-left: 1rem;
+
+                    .ico-cart {
+                        fill: $white;
+                    }
+                }
+            }
+        }
     }
 }
